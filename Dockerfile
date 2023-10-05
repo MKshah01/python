@@ -9,6 +9,6 @@ COPY python /app/
 RUN apt-get update && \
     apt-get install -y python3 python3-pip && \
     pip install -r requirements.txt && \
-    cd python
+    cd SpaceShip-Game
 
 CMD [ "main.py"."runserver","0.0.0.0:8000" ]
