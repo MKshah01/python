@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY requirements.txt /app/
 
-COPY python /app/
+COPY SpaceShip-Game /app/
 
 RUN apt-get update && \
     apt-get install -y python3 python3-pip && \
