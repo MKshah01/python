@@ -11,4 +11,4 @@ RUN apt-get update && \
     pip install -r requirements.txt && \
     cd SpaceShip-Game
 
-CMD [ "main.py"."runserver","0.0.0.0:8000" ]
+CMD [ "main.py"."runserver","0.0.0.0:8800" ]
