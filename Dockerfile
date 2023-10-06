@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y apt-utils \
     pip install -r requirements.txt
 
 # Change the working directory to SpaceShip-Game
-WORKDIR /app/SpaceShip-Game
+WORKDIR /app/
 
 # Define the CMD instruction
 CMD ["python3", "main.py", "runserver", "0.0.0.0:8800"]
