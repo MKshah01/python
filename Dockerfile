@@ -1,20 +1,18 @@
-FROM ubuntu:latest
+# Use a Python base image
+FROM python:3.10
 
 # Set the working directory
 WORKDIR /app
 
-# Copy requirements.txt and SpaceShip-Game into the container
-COPY requirements.txt /app/
-COPY SpaceShip-Game /app/
+# Copy your game files into the container
+COPY . /app
 
-# Update and install dependencies
-RUN apt-get update && \
-    apt-get install -y python3 python3-pip && \
-    pip install -r requirements.txt \
-    pip install mixer
+# Install any dependencies (if needed)
+# For example, if you have a requirements.txt file:
+RUN pip install -r requirements.txt
 
-# Change the working directory to SpaceShip-Game
-WORKDIR /app/
+# Expose the necessary port (if your game has a server)
+# EXPOSE 8080
 
-# Define the CMD instruction
-CMD ["python3", "main.py", "runserver", "54.147.192.220:5500"]
+# Command to run your game
+CMD ["python", "main.py"]
