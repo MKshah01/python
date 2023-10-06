@@ -17,4 +17,4 @@ RUN apt-get update && \
 WORKDIR /app/
 
 # Define the CMD instruction
-CMD ["python3", "main.py", "runserver", "0.0.0.0:8800"]
+CMD ["python3", "main.py", "runserver", "54.147.192.220:5500"]
