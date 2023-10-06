@@ -8,7 +8,7 @@ COPY requirements.txt /app/
 COPY SpaceShip-Game /app/
 
 # Update and install dependencies
-RUN apt-get update && \
+RUN apt-get update && apt-get install -y apt-utils \
     apt-get install -y python3 python3-pip && \
     pip install -r requirements.txt
 
