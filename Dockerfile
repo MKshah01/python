@@ -4,7 +4,8 @@ FROM ubuntu
 WORKDIR /app
 
 # Copy requirements.txt and SpaceShip-Game into the container
-COPY requirements.txt SpaceShip-Game /app/
+COPY requirements.txt /app/
+COPY SpaceShip-Game /app/
 
 # Update and install dependencies
 RUN apt-get update && \
