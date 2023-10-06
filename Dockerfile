@@ -1,6 +1,7 @@
 FROM ubuntu
 
 # Set the working directory
+WORKDIR /app
 
 # Copy requirements.txt and SpaceShip-Game into the container
 COPY requirements.txt SpaceShip-Game /app/
@@ -11,7 +12,7 @@ RUN apt-get update && \
     pip install -r requirements.txt
 
 # Change the working directory to SpaceShip-Game
-WORKDIR /SpaceShip-Game
+WORKDIR /app/SpaceShip-Game
 
 # Define the CMD instruction
 CMD ["python3", "main.py", "runserver", "0.0.0.0:8800"]
